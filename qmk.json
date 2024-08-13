@@ -2,6 +2,7 @@
     "userspace_version": "1.0",
     "build_targets": [
         ["fingerpunch/vulpes_majora/v1", "taz"],
-        ["taz/kaizen", "taz"]
+        ["taz/kaizen", "taz"],
+        ["pteron36", "taz"]
     ]
 }
