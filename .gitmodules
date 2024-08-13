@@ -1,0 +1,3 @@
+[submodule "users/features/maccel"]
+	path = users/features/maccel
+	url = https://github.com/finrod09/qmk_userspace_features.git
