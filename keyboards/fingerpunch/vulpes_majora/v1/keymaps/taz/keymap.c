@@ -142,9 +142,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 )
 };
 
-report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
-    // ...
 #ifdef MACCEL_ENABLE
+report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     return pointing_device_task_maccel(mouse_report);
-#endif
 }
+#endif
