@@ -1,5 +1,8 @@
 #include QMK_KEYBOARD_H
 
+#ifdef MACCEL_ENABLE
+    #include "features/maccel/maccel/maccel.h"
+#endif
 
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
@@ -138,3 +141,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      _______, _______, _______,     _______, _______, _______
 )
 };
+
+report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+    // ...
+#ifdef MACCEL_ENABLE
+    return pointing_device_task_maccel(mouse_report);
+#endif
+}
