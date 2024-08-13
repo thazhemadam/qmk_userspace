@@ -1,4 +1,5 @@
 # Junk files
+.vscode/*
 *.bak
 *.swp
 *~
